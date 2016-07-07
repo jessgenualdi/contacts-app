@@ -1,0 +1,14 @@
+<h2>Contact:</h2>
+<h2><%= @contact.first.first_name %></h2>
+<h2><%= @contact.first.last_name %></h2>
+<h2><%= @contact.first.email %></h2>
+<h2><%= @contact.first.phone_number %></h2>
+
+<% @contact.each do |contact|%>
+<ul>
+  <li><%= contact.first_name %></li>     
+  <li><%= contact.last_name %></li>
+  <li><%= contact.email %></li>
+  <li><%= contact.phone_number %></li>
+  </ul>
+<% end %>
