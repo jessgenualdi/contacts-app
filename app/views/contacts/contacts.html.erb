@@ -1,14 +1,15 @@
-<h2>Contact:</h2>
-<h2><%= @contact.first.first_name %></h2>
-<h2><%= @contact.first.last_name %></h2>
-<h2><%= @contact.first.email %></h2>
-<h2><%= @contact.first.phone_number %></h2>
+<h2>Contacts:</h2>
 
-<% @contact.each do |contact|%>
+
+<% @contacts.each do |contact| %>
+<a href="/contact_info/<%= contact.id %>">
 <ul>
   <li><%= contact.first_name %></li>     
   <li><%= contact.last_name %></li>
   <li><%= contact.email %></li>
   <li><%= contact.phone_number %></li>
   </ul>
+</a>
 <% end %>
+
+<a href='/contact_info/new'>Add A New Contact</a>

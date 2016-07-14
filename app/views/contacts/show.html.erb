@@ -1,0 +1,21 @@
+
+
+<ul>
+  <li><%= @contact.full_name %></li> 
+  <li><%= @contact.email %></li>
+  <li><%= @contact.japan_prefix + @contact.phone_number %></li>
+  <li><%= @contact.friendly_created_at %></li>
+</ul>
+
+<a href="/contact_info/<%=@contact.id%>/edit">Edit this contact info</a>
+
+
+<%= form_tag '/contact_info/' + @contact.id.to_s, method: :delete do %>
+<div>
+    <%= submit_tag 'Delete this contact' %>
+  </div>
+<% end %>
+
+
+
+
