@@ -11,9 +11,12 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(
       first_name: params['first_name'],
+      middle_name: params['middle_name'],
       last_name: params['last_name'],
       email: params['email'],
-      phone_number: params['phone_number']
+      phone_number: params['phone_number'],
+      bio: params['bio'],
+      user_id: params['user_id']
       )
     @contact.save 
     redirect_to "/contact_info/#{@contact.id}"	

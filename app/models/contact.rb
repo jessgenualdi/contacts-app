@@ -1,4 +1,6 @@
 class Contact < ActiveRecord::Base
+  belongs_to :user
+  
   def friendly_created_at
     created_at.strftime('%b %d %Y')
   end
@@ -12,10 +14,3 @@ class Contact < ActiveRecord::Base
   end
 end
 
-class John < Contact
-  def all_johns
-    @find_john = Contacts.find_by(first_name: params['Joe'])
-    @find_john.each do |name|
-    end 
-  end
-end

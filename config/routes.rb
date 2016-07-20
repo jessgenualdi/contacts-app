@@ -8,6 +8,12 @@ get '/contact_info/all_johns' => 'contacts#all_johns'
 patch '/contact_info/:id' => 'contacts#update'
 delete '/contact_info/:id' => 'contacts#destroy'
 
+get '/signup' => 'users#new'
+post '/users' => 'users#create'
+get '/login' => 'sessions#new'
+post '/login' => 'sessions#create'
+get '/logout' => 'sessions#destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
